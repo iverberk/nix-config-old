@@ -129,7 +129,7 @@
         size = 100000;
       };
       initExtraBeforeCompInit = ''
-        mkdir -p ~/code/{github.com,go}
+        mkdir -p ~/code/{github.com,go} ~/scratch
         export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#757575'
 
         bindkey '^[[A' history-substring-search-up
