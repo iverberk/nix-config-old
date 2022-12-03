@@ -18,6 +18,7 @@
     pkgs.nodePackages.fixjson
     pkgs.ripgrep
     pkgs.gdb
+    pkgs.kubectl
   ];
 
   home.sessionVariables = {
