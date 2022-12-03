@@ -90,11 +90,6 @@
       };
     };
 
-    go = {
-      enable = true;
-      goPath = "code/go";
-    };
-
     direnv = {
       enable = true;
       nix-direnv.enable = true;
