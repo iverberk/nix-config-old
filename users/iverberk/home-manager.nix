@@ -17,6 +17,8 @@
     pkgs.ripgrep
     pkgs.gdb
     pkgs.kubectl
+    pkgs.isort
+    pkgs.pylint
   ];
 
   home.sessionVariables = {
