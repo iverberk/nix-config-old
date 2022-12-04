@@ -68,7 +68,7 @@ return packer.startup(function(use)
 
   -- Workspace and session management
   use { 'natecraddock/workspaces.nvim', config = [[ require('plugins/workspaces') ]], requires = { 'nvim-telescope/telescope.nvim' } }
-  use { 'natecraddock/sessions.nvim', config = [[ require('plugins/sessions') ]], requires = { 'natecraddock/workspaces.nvim' } }
+  use { 'natecraddock/sessions.nvim', config = [[ require('plugins/sessions') ]], requires = { 'natecraddock/workspaces.nvim' }, branch = 'session-path-absolute' }
 
   -- UI
   use { 'lewis6991/gitsigns.nvim', config = [[ require('plugins/gitsigns') ]], requires = { 'nvim-lua/plenary.nvim' } }
@@ -86,7 +86,7 @@ return packer.startup(function(use)
   use { 'hrsh7th/nvim-cmp', config = [[ require('plugins/nvim-cmp') ]], requires = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'saadparwaiz1/cmp_luasnip' } }
   use { 'jose-elias-alvarez/null-ls.nvim', config = [[ require('lsp/null-ls') ]] }
   use { 'neovim/nvim-lspconfig', config = [[ require('lsp') ]] }
-  
+
   -- Language support
   -- use { 'danymat/neogen', config = [[ require('plugins/neogen') ]], requires = "nvim-treesitter/nvim-treesitter", tag = "*" }
   use { 'nvim-treesitter/nvim-treesitter', config = [[ require('plugins/nvim-treesitter') ]], run = ':TSUpdate' }
