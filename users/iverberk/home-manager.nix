@@ -10,8 +10,6 @@
     pkgs.firefox
     pkgs.rofi
     pkgs.unstable.neovim-unwrapped # Not managed with HM because of init conflict
-    pkgs.unstable.gopls
-    pkgs.unstable.terraform-ls
     pkgs.shellcheck
     pkgs.shfmt
     pkgs.yamllint
