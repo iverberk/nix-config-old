@@ -29,9 +29,9 @@ ws.setup({
     rename = {},
     open_pre = {
       "SessionsStop",
-      "silent %bdelete!",
     },
-    open = { 
+    open = {
+      "bufdo bwipeout",
       function()
         require("sessions").load(nil, { silent = true })
       end,
