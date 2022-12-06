@@ -36,4 +36,4 @@ o.list = false
 bo.smartindent = true
 bo.swapfile = false
 wo.number = true
-wo.wrap = false
+wo.wrap = true
