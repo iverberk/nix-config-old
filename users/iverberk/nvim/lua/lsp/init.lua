@@ -7,13 +7,6 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
-lspconfig.gopls.setup({
-  analyses = {
-    unusedparams = false
-  }, 
-  staticcheck = true
-})
-
 lspconfig.terraformls.setup({
   filetypes = { "tf", "terraform" }
 })
@@ -65,7 +58,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Jumps to the definition of the type symbol
     bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
-    -- Lists all the references 
+    -- Lists all the references
     bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
     -- Displays a function's signature information
