@@ -7,6 +7,13 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
+lspconfig.gopls.setup({
+  analyses = {
+    unusedparams = false
+  },
+  staticcheck = true
+})
+
 lspconfig.terraformls.setup({
   filetypes = { "tf", "terraform" }
 })

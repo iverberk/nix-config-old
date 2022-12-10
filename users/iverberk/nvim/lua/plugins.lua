@@ -92,7 +92,7 @@ return packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', config = [[ require('plugins/nvim-treesitter') ]], run = ':TSUpdate' }
   use { "windwp/nvim-autopairs", config = [[ require('plugins/nvim-autopairs') ]] }
   use { 'numtostr/comment.nvim', config = [[ require('plugins/comment') ]] }
-  use { 'ray-x/go.nvim', config = [[ require('plugins/go') ]], requires = { 'ray-x/guihua.lua' } }
+  -- use { 'ray-x/go.nvim', config = [[ require('plugins/go') ]], requires = { 'ray-x/guihua.lua' } }
   -- use { 'JoosepAlviste/nvim-ts-context-commentstring', requires = "nvim-treesitter/nvim-treesitter" }
   -- use { 'windwp/nvim-ts-autotag', config = [[ require('plugins/nvim-ts-autotag') ]] }
 
