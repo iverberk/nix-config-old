@@ -14,6 +14,6 @@ nt.setup({
     },
     follow_current_file = true,
     group_empty_dirs = false,
-    use_libuv_file_watcher = true
+    use_libuv_file_watcher = false
   }
 })
