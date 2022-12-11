@@ -14,7 +14,8 @@ map('n', '<M-b>', ':Telescope buffers<cr>', opts)
 map('n', '<M-r>', ':Telescope registers<cr>', opts)
 map('n', '<M-p>', ':Telescope projects<cr>', opts)
 map('n', '<M-q>', ':Telescope quickfix<cr>', opts)
-map('n', '<M-w>', ':Telescope workspaces<cr>', opts)
+
+map('n', '<M-s>', ':SessionManager! load_session<cr>', opts)
 
 map("n", "<C-g>", "<cmd>lua _lazygit_toggle()<CR>", opts)
 

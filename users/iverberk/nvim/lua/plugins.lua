@@ -66,9 +66,8 @@ return packer.startup(function(use)
       }
   }
 
-  -- Workspace and session management
-  use { 'natecraddock/workspaces.nvim', config = [[ require('plugins/workspaces') ]], requires = { 'nvim-telescope/telescope.nvim' } }
-  use { 'natecraddock/sessions.nvim', config = [[ require('plugins/sessions') ]], requires = { 'natecraddock/workspaces.nvim' }, branch = 'session-path-absolute' }
+  -- Session management
+  use { 'Shatur/neovim-session-manager', config = [[ require('plugins/neovim-session-manager') ]], requires = { 'nvim-lua/plenary.nvim' } }
 
   -- UI
   use { 'lewis6991/gitsigns.nvim', config = [[ require('plugins/gitsigns') ]], requires = { 'nvim-lua/plenary.nvim' } }
