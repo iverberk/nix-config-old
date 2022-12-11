@@ -69,7 +69,12 @@ return packer.startup(function(use)
   -- Session management
   use { 'Shatur/neovim-session-manager', config = [[ require('plugins/neovim-session-manager') ]], requires = { 'nvim-lua/plenary.nvim' } }
 
+  -- Task runner
+  use { 'stevearc/overseer.nvim', config = [[ require('plugins/overseer') ]], requires = { 'nvim-lua/plenary.nvim' } }
+
   -- UI
+  use { 'rcarriga/nvim-notify' }
+  use { 'nvim-telescope/telescope-ui-select.nvim', config = [[ require('plugins/telescope-ui-select') ]], requires = { 'nvim-telescope/telescope.nvim' } }
   use { 'lewis6991/gitsigns.nvim', config = [[ require('plugins/gitsigns') ]], requires = { 'nvim-lua/plenary.nvim' } }
   use { 'RRethy/nvim-base16', config = [[ require('plugins/nvim-base16') ]] }
   use { 'akinsho/toggleterm.nvim', config = [[ require('plugins/toggleterm') ]] }

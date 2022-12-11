@@ -17,6 +17,9 @@ map('n', '<M-q>', ':Telescope quickfix<cr>', opts)
 
 map('n', '<M-s>', ':SessionManager! load_session<cr>', opts)
 
+map('n', '<leader>r', ':OverseerRun<cr>', opts)
+map('n', '<leader>t', ':OverseerToggle<cr>', opts)
+
 map("n", "<C-g>", "<cmd>lua _lazygit_toggle()<CR>", opts)
 
 map('n', 's', ':Pounce<cr>', opts)

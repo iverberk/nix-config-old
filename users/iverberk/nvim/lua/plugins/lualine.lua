@@ -7,9 +7,12 @@ lualine.setup({
   extensions = { 'neo-tree' },
   sections = {
     lualine_x = {
-      'filetype'
+      'overseer'
     },
     lualine_y = {
+      'filetype'
+    },
+    lualine_z = {
       'encoding'
     }
   }
