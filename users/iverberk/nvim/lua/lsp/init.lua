@@ -45,46 +45,47 @@ vim.diagnostic.config({
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
   callback = function()
-    local bufmap = function(mode, lhs, rhs)
+    local buf_map = function(mode, lhs, rhs)
       local opts = {buffer = true}
       vim.keymap.set(mode, lhs, rhs, opts)
     end
 
     -- Displays hover information about the symbol under the cursor
-    bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+    buf_map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
     -- Jump to the definition
-    bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+    buf_map('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<cr>')
 
     -- Jump to declaration
-    bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+    buf_map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
 
     -- Lists all the implementations for the symbol under the cursor
-    bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+    buf_map('n', 'gi', '<cmd>lua require("telescope.builtin").lsp_implementations()<cr>')
 
     -- Jumps to the definition of the type symbol
-    bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+    buf_map('n', 'gt', '<cmd>lua require("telescope.builtin").lsp_type_definitions()<cr>')
 
     -- Lists all the references
-    bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+    buf_map('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<cr>')
 
     -- Displays a function's signature information
-    bufmap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+    buf_map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+
+    -- Diagnostics
+    buf_map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+    buf_map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+    buf_map('n', 'ge', '<cmd>lua vim.diagnostic.open_float(nil, { scope = "line", })<cr>')
+    buf_map('n', '<leader>wd', '<cmd>Telescope diagnostics<cr>')
+
+    -- formatting
+    buf_map('n', '<leader>gf', '<cmd>lua vim.lsp.buf.format { async = true }<cr>')
+    buf_map('v', '<leader>gf', '<cmd>lua vim.lsp.buf.range_formatting()<cr>')
 
     -- Renames all references to the symbol under the cursor
-    bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    buf_map('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
     -- Selects a code action available at the current cursor position
-    bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-    bufmap('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
-
-    -- Show diagnostics in a floating window
-    bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
-
-    -- Move to the previous diagnostic
-    bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-
-    -- Move to the next diagnostic
-    bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+    buf_map('n', 'ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    buf_map('x', 'ca', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
   end
 })
