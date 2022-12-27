@@ -88,6 +88,7 @@ return packer.startup(function(use)
   use { 'hrsh7th/nvim-cmp', config = [[ require('plugins/nvim-cmp') ]], requires = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'saadparwaiz1/cmp_luasnip' } }
   use { 'jose-elias-alvarez/null-ls.nvim', config = [[ require('lsp/null-ls') ]] }
   use { 'neovim/nvim-lspconfig', config = [[ require('lsp') ]] }
+  use { "windwp/nvim-autopairs", config = [[ require('plugins/nvim-autopairs') ]] }
 
   -- Language support
   -- use { 'danymat/neogen', config = [[ require('plugins/neogen') ]], requires = "nvim-treesitter/nvim-treesitter", tag = "*" }
