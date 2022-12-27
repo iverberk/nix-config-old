@@ -18,6 +18,13 @@ function _lazygit_toggle()
     close_on_exit = true,
     float_opts = {
       border = "double",
+      width = function()
+        return math.floor(vim.o.columns)
+      end,
+
+      height = function()
+        return math.floor((vim.o.lines - vim.o.cmdheight))
+      end,
     }
   })
 
