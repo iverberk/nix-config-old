@@ -91,22 +91,8 @@ return packer.startup(function(use)
   use { "windwp/nvim-autopairs", config = [[ require('plugins/nvim-autopairs') ]] }
 
   -- Language support
-  -- use { 'danymat/neogen', config = [[ require('plugins/neogen') ]], requires = "nvim-treesitter/nvim-treesitter", tag = "*" }
   use { 'nvim-treesitter/nvim-treesitter', config = [[ require('plugins/nvim-treesitter') ]], run = ':TSUpdate' }
-  use { "windwp/nvim-autopairs", config = [[ require('plugins/nvim-autopairs') ]] }
   use { 'numtostr/comment.nvim', config = [[ require('plugins/comment') ]] }
-  -- use { 'ray-x/go.nvim', config = [[ require('plugins/go') ]], requires = { 'ray-x/guihua.lua' } }
-  -- use { 'JoosepAlviste/nvim-ts-context-commentstring', requires = "nvim-treesitter/nvim-treesitter" }
-  -- use { 'windwp/nvim-ts-autotag', config = [[ require('plugins/nvim-ts-autotag') ]] }
-
-  -- Debugging
-  -- use { 'mfussenegger/nvim-dap', config = [[ require('plugins/nvim-dap') ]] }
-  -- use { 'mfussenegger/nvim-dap-python', config = [[ require('plugins/nvim-dap-python') ]], after = { 'nvim-dap' } }
-  -- use { 'nvim-telescope/telescope-dap.nvim', after = { 'nvim-dap' } }
-
-  -- Testing
-  -- use { 'nvim-neotest/neotest', config = [[ require('plugins/nvim-neotest') ]], requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" } }
-  -- use { 'nvim-neotest/neotest-python', requires = { 'nvim-neotest/neotest' } }
 
   if bootstrap then
     require("packer").sync()
