@@ -58,8 +58,7 @@ return packer.startup(function(use)
   -- Navigation
   use { 'nvim-telescope/telescope.nvim', config = [[ require('plugins/telescope') ]], requires = { 'nvim-lua/plenary.nvim' } }
   use { 'rlane/pounce.nvim', config = [[ require('plugins/pounce') ]] }
-  use { 'knubie/vim-kitty-navigator', run = 'cp ./*.py ~/.config/kitty/' }
-      "nvim-lua/plenary.nvim",
+  use { 'numToStr/Navigator.nvim', config = [[ require('plugins/navigator') ]] }
   use { 'nvim-tree/nvim-tree.lua', config = [[ require('plugins/nvim-tree') ]], requires = {
       "kyazdani42/nvim-web-devicons",
     }
