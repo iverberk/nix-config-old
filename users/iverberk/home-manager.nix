@@ -9,7 +9,7 @@
   home.packages = [
     pkgs.firefox
     pkgs.rofi
-    pkgs.unstable.neovim-unwrapped # Not managed with HM because of init conflict
+    pkgs.unstable.neovim-unwrapped
     pkgs.shellcheck
     pkgs.shfmt
     pkgs.yamllint
@@ -17,8 +17,7 @@
     pkgs.ripgrep
     pkgs.gdb
     pkgs.kubectl
-    pkgs.isort
-    pkgs.pylint
+    pkgs.dbeaver
   ];
 
   home.sessionVariables = {
@@ -151,6 +150,7 @@
       enable = true;
       extraConfig = builtins.readFile ./wezterm/wezterm.lua;
     };
+
     i3status = {
       enable = true;
 
