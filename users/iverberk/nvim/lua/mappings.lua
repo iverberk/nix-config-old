@@ -4,7 +4,7 @@ local opts = { silent = true }
 map('', "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
-map('n', '<leader>n', ':Neotree reveal toggle<cr>', opts)
+map('n', '<leader>n', ':NvimTreeToggle<cr>', opts)
 
 map('n', '<C-p>', ':Telescope find_files hidden=true<cr>', opts)
 map('n', '<M-g>', ':Telescope live_grep<cr>', opts)

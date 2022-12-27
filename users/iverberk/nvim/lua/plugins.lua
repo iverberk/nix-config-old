@@ -59,11 +59,10 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim', config = [[ require('plugins/telescope') ]], requires = { 'nvim-lua/plenary.nvim' } }
   use { 'rlane/pounce.nvim', config = [[ require('plugins/pounce') ]] }
   use { 'knubie/vim-kitty-navigator', run = 'cp ./*.py ~/.config/kitty/' }
-  use { 'nvim-neo-tree/neo-tree.nvim', config = [[ require('plugins/neo-tree') ]], branch = "v2.x", event='VimEnter', requires = {
       "nvim-lua/plenary.nvim",
+  use { 'nvim-tree/nvim-tree.lua', config = [[ require('plugins/nvim-tree') ]], requires = {
       "kyazdani42/nvim-web-devicons",
-      "MunifTanjim/nui.nvim"
-      }
+    }
   }
 
   -- Session management
