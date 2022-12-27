@@ -1,0 +1,17 @@
+---
+keybinding:
+  commits:
+    moveDownCommit: j
+    moveUpCommit: k
+  universal:
+    nextBlock: <c-j>
+    prevBlock: <c-k>
+quitOnTopLevelReturn: true
+git:
+  overrideGpg: true
+customCommands:
+  - key: "m"
+    description: "Create Gitlab MR"
+    command: "glab mr create -f -b main --push --yes"
+    context: "localBranches"
+    loadingText: "Creating MR"
