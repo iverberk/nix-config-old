@@ -147,6 +147,10 @@
       font.package = (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; });
     };
 
+    wezterm = {
+      enable = true;
+      extraConfig = builtins.readFile ./wezterm/wezterm.lua;
+    };
     i3status = {
       enable = true;
 
