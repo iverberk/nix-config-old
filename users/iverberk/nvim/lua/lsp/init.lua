@@ -14,6 +14,17 @@ lspconfig.gopls.setup({
   staticcheck = true
 })
 
+lspconfig.pyright.setup({
+  settings = {
+    python = {
+      analysis = {
+        useLibraryCodeForTypes = true,
+        typeCheckingMode = "off"
+      }
+    }
+  }
+})
+
 lspconfig.terraformls.setup({
   filetypes = { "tf", "terraform" }
 })
