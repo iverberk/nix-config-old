@@ -12,6 +12,6 @@ git:
 customCommands:
   - key: "m"
     description: "Create Gitlab MR"
-    command: "glab mr create -f -b main --push --yes"
+    command: "glab mr create -f -b main --push --yes --remove-source-branch"
     context: "localBranches"
     loadingText: "Creating MR"
