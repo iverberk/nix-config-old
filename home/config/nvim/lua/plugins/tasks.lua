@@ -8,7 +8,7 @@ return {
     keys = {
       { "<leader>r", "<cmd>OverseerRun<cr>", desc = "Run a task" },
       { "<leader>rl", "<cmd>OverseerRestartLast<cr>", desc = "Restart last task" },
-      { "<leader>tt", "cmd>OverseerToggle<cr>", desc = "Open task list" },
+      { "<leader>tt", "<cmd>OverseerToggle<cr>", desc = "Open task list" },
     },
     opts = {
       templates = { "builtin", "terraform" },
