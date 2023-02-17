@@ -38,7 +38,7 @@ o.so = 999
 o.redrawtime = 1500
 o.timeoutlen = 500
 o.updatetime = 100
-o.fillchars = { eob = ' ', vert = '▎' }
+o.fillchars = { eob = ' ', vert = '▎', diff = '╱' }
 o.number = true
 o.pumheight = 10
 o.scrolloff = 4

@@ -38,6 +38,7 @@
     brews = [];
 
     casks = [
+      "teamviewer"
       "slack"
       "caffeine"
       "alfred"
