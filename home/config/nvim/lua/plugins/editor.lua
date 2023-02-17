@@ -1,6 +1,23 @@
 return {
-  { 'numtostr/comment.nvim', event = "VeryLazy" },
+  { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
+
+  {
+    "echasnovski/mini.comment",
+    event = "VeryLazy",
+    opts = {
+      hooks = {
+        pre = function()
+          require("ts_context_commentstring.internal").update_commentstring({})
+        end,
+      },
+    },
+    config = function(_, opts)
+      require("mini.comment").setup(opts)
+    end,
+  },
+
   { 'tpope/vim-surround', event = 'VeryLazy' },
+
   {
     'rlane/pounce.nvim',
     cmd = 'Pounce',
@@ -65,6 +82,50 @@ return {
   {
     'famiu/bufdelete.nvim',
     cmd = { 'Bdelete', 'Bwipeout' }
+  },
+
+  {
+    'sindrets/diffview.nvim',
+    cmd = {'DiffviewOpen', 'DiffviewFileHistory' },
+    opts = {}
+  },
+
+  {
+    'akinsho/toggleterm.nvim',
+    event = 'VeryLazy',
+    config = function()
+
+      require('toggleterm').setup({})
+
+      function _lazygit_toggle()
+        local count = 0
+
+        for char in string.gmatch(vim.api.nvim_eval("sha256(getcwd())"), '%S') do
+          count = count + string.byte(char)
+        end
+
+        local term = require('toggleterm.terminal').Terminal:new({
+          count = count,
+          cmd = "lazygit",
+          dir = "git_dir",
+          autochdir = true,
+          direction = "float",
+          close_on_exit = true,
+          float_opts = {
+            border = "double",
+            width = function()
+              return math.floor(vim.o.columns)
+            end,
+
+            height = function()
+              return math.floor((vim.o.lines - vim.o.cmdheight))
+            end,
+          }
+        })
+
+        term:toggle()
+      end
+    end
   }
 
 }
