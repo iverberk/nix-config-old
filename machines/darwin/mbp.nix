@@ -48,6 +48,7 @@
       "istat-menus"
       "microsoft-auto-update"
       "microsoft-excel"
+      "microsoft-powerpoint"
       "microsoft-outlook"
       "microsoft-teams"
       "onedrive"
