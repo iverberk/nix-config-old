@@ -15,6 +15,7 @@
     nodePackages.fixjson
     ripgrep
     kubectl
+    krew
     wget
     tree-sitter
     jq
@@ -23,13 +24,24 @@
     unstable.terraform-ls
     nodePackages.yaml-language-server
     nodePackages.bash-language-server
+    nodePackages.vscode-json-languageserver
     nodePackages.pyright
     black
+    minikube
     isort
     python311
     terraform
     tflint
     pylint
+    kubernetes-helm
+    unstable.argocd
+    go
+    gopls
+    watch
+    k9s
+    step-cli
+    unstable.linkerd
+    stern
     python310Packages.pip
     (nerdfonts.override { fonts = [ "Meslo" ]; })
   ];
