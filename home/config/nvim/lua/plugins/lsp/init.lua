@@ -74,7 +74,7 @@ return {
           nls.builtins.diagnostics.yamllint.with({args = { "--format", "parsable", "-" }}),
           nls.builtins.diagnostics.pylint,
           nls.builtins.formatting.shfmt,
-          nls.builtins.formatting.prettierd,
+          nls.builtins.formatting.prettier,
           nls.builtins.formatting.isort,
           nls.builtins.formatting.black,
           nls.builtins.formatting.fixjson

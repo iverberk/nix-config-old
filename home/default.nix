@@ -26,6 +26,7 @@
     nodePackages.bash-language-server
     nodePackages.vscode-json-languageserver
     nodePackages.pyright
+    nodePackages.prettier
     black
     minikube
     isort
