@@ -40,6 +40,13 @@ return {
           }
         }
       },
+      actions = {
+        open_file = {
+          window_picker = {
+            enable = false
+          }
+        },
+      },
       update_focused_file = {
         enable = true
       },
