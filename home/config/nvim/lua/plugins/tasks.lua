@@ -6,7 +6,7 @@ return {
     },
     cmd = "OverseerRun",
     keys = {
-      { "<leader>r", "<cmd>OverseerRun<cr>", desc = "Run a task" },
+      { "<leader>rt", "<cmd>OverseerRun<cr>", desc = "Run a task" },
       { "<leader>rl", "<cmd>OverseerRestartLast<cr>", desc = "Restart last task" },
       { "<leader>tt", "<cmd>OverseerToggle<cr>", desc = "Open task list" },
     },
