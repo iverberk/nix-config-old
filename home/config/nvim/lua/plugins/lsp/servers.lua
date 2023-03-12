@@ -23,6 +23,7 @@ return {
   tsserver = {},
   tflint = {},
   jsonls = {
+    cmd = { "vscode-json-languageserver", "--stdio" },
     settings = {
       json = {
         -- schemas = require('schemastore').json.schemas(),
