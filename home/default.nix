@@ -57,6 +57,7 @@
   xdg.configFile."starship.toml".text = builtins.readFile ./config/starship.toml;
   xdg.configFile."wezterm/wezterm.lua".text = builtins.readFile ./config/wezterm.lua;
   xdg.configFile."lazygit/config.yml".text = builtins.readFile ./config/lazygit.yml;
+  xdg.configFile."yamllint/config".text = builtins.readFile ./config/yamllint.yaml;
 
   xdg.configFile."nvim" = {
     source = ./config/nvim;
