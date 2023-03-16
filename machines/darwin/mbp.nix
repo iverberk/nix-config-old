@@ -38,6 +38,7 @@
     brews = [];
 
     casks = [
+      "microsoft-remote-desktop"
       "teamviewer"
       "slack"
       "caffeine"
