@@ -34,8 +34,11 @@
     terraform
     tflint
     pylint
-    kubernetes-helm
+    age
+    unstable.vault
+    unstable.kubernetes-helm
     unstable.argocd
+    unstable.helmfile
     go
     gopls
     watch
